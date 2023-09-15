@@ -8,7 +8,10 @@ import reportWebVitals from './reportWebVitals';
 //import Clock from './chp_04/Clock';
 // import Clock from './chp_05/CommentList';
 // import CommentList from './chp_05/CommentList';
-import NotificationList from './chp_06/NotificationList';
+//import NotificationList from './chp_06/NotificationList';
+// import Accommodate from './chp_07/Accommodate';
+// import ConfirmButton from './chp_08/ConfirmButton';
+import LandingPage from './chp_09/LandingPage';
 
 const root = ReactDOM.createRoot(document.getElementById('root')); //리액트18버전으로함
 
@@ -36,9 +39,30 @@ const root = ReactDOM.createRoot(document.getElementById('root')); //리액트18
 // );
 
 //**chp_06**
+// root.render(
+//   <React.StrictMode>
+//     <NotificationList />
+//   </React.StrictMode>
+// );
+
+//**chp_07**
+// root.render(
+//   <React.StrictMode>
+//     <Accommodate />
+//   </React.StrictMode>
+// );
+
+//**chp_08**
+// root.render(
+//   <React.StrictMode>
+//     <ConfirmButton />
+//   </React.StrictMode>
+// );
+
+//**chp_09**
 root.render(
   <React.StrictMode>
-    <NotificationList />
+    <LandingPage />
   </React.StrictMode>
 );
 
