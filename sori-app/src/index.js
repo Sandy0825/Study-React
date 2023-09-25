@@ -11,7 +11,8 @@ import reportWebVitals from './reportWebVitals';
 //import NotificationList from './chp_06/NotificationList';
 // import Accommodate from './chp_07/Accommodate';
 // import ConfirmButton from './chp_08/ConfirmButton';
-import LandingPage from './chp_09/LandingPage';
+//import LandingPage from './chp_09/LandingPage';
+import Calculator from './chp_12/Calculator';
 
 const root = ReactDOM.createRoot(document.getElementById('root')); //리액트18버전으로함
 
@@ -60,9 +61,16 @@ const root = ReactDOM.createRoot(document.getElementById('root')); //리액트18
 // );
 
 //**chp_09**
+// root.render(
+//   <React.StrictMode>
+//     <LandingPage />
+//   </React.StrictMode>
+// );
+
+//**chp_12**
 root.render(
   <React.StrictMode>
-    <LandingPage />
+    <Calculator />
   </React.StrictMode>
 );
 
