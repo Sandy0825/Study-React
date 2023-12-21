@@ -12,7 +12,11 @@ import reportWebVitals from './reportWebVitals';
 // import Accommodate from './chp_07/Accommodate';
 // import ConfirmButton from './chp_08/ConfirmButton';
 //import LandingPage from './chp_09/LandingPage';
-import Calculator from './chp_12/Calculator';
+// import Calculator from './chp_12/Calculator';
+// import ProfileCard from './chp_13/ProfileCard';
+// import DarkOrLight from './chp_14/DarkOrLight';
+import Blocks from './chp_15/Blocks';
+
 
 const root = ReactDOM.createRoot(document.getElementById('root')); //리액트18버전으로함
 
@@ -68,9 +72,30 @@ const root = ReactDOM.createRoot(document.getElementById('root')); //리액트18
 // );
 
 //**chp_12**
+// root.render(
+//   <React.StrictMode>
+//     <Calculator />
+//   </React.StrictMode>
+// );
+
+//**chp_13**
+// root.render(
+//   <React.StrictMode>
+//     <ProfileCard />
+//   </React.StrictMode>
+// );
+
+//**chp_14**
+// root.render(
+//   <React.StrictMode>
+//     <DarkOrLight />
+//   </React.StrictMode>
+// );
+
+//**chp_14**
 root.render(
   <React.StrictMode>
-    <Calculator />
+    <Blocks />
   </React.StrictMode>
 );
 
