@@ -5,9 +5,8 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 
 // import Library from './chp_03/Library';
-//import Clock from './chp_04/Clock';
-// import Clock from './chp_05/CommentList';
-// import CommentList from './chp_05/CommentList';
+// import Clock from './chp_04/Clock';
+import CommentList from './chp_05/CommentList';
 //import NotificationList from './chp_06/NotificationList';
 // import Accommodate from './chp_07/Accommodate';
 // import ConfirmButton from './chp_08/ConfirmButton';
@@ -15,7 +14,7 @@ import reportWebVitals from './reportWebVitals';
 // import Calculator from './chp_12/Calculator';
 // import ProfileCard from './chp_13/ProfileCard';
 // import DarkOrLight from './chp_14/DarkOrLight';
-import Blocks from './chp_15/Blocks';
+// import Blocks from './chp_15/Blocks';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root')); //리액트18버전으로함
@@ -37,11 +36,11 @@ const root = ReactDOM.createRoot(document.getElementById('root')); //리액트18
 // }, 1000);
 
 //**chp_05**
-// root.render(
-//   <React.StrictMode>
-//     <CommentList />
-//   </React.StrictMode>
-// );
+root.render(
+  <React.StrictMode>
+    <CommentList />
+  </React.StrictMode>
+);
 
 //**chp_06**
 // root.render(
@@ -93,11 +92,11 @@ const root = ReactDOM.createRoot(document.getElementById('root')); //리액트18
 // );
 
 //**chp_14**
-root.render(
-  <React.StrictMode>
-    <Blocks />
-  </React.StrictMode>
-);
+// root.render(
+//   <React.StrictMode>
+//     <Blocks />
+//   </React.StrictMode>
+// );
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
