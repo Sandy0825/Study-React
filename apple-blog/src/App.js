@@ -7,6 +7,7 @@ function App() {
   const [list, setList] = useState(['남자코트 추천', '강남 우동맛집', '파이썬 독학']);
   const [good, setGood] = useState([0,1,2]);
   const [modal, setModal] = useState(false);
+  const [title, setTitle] = useState(0);
 
   function Change(){
     let copy = [...list];
@@ -27,24 +28,11 @@ function App() {
       </div>
       <button onClick={Textorder}>가나다 순</button>
       <button onClick={Change}>글바뀜</button>
-      {/* <div className="list">
-        <h4>{ list[0] } <span onClick={() => {setGood(good+1)}}>👍</span>{good}</h4>
-        <p>2월 17일 발행</p>
-      </div>
-      <div className="list">
-        <h4>{ list[1] }</h4>
-        <p>2월 17일 발행</p>
-      </div>
-      <div className="list">
-        <h4 onClick={() => {setModal(!modal)}}>{ list[2] }</h4>
-        <p>2월 17일 발행</p>
-      </div> */}
-
       {
         list.map(function(a, i){
           return(
             <div className="list" key={i}>
-              <h4>{ list[i] } 
+              <h4 onClick={() => { setModal(!modal); setTitle(i)}}>{ list[i] } 
                 <span onClick={() => {
                   let thumb = [...good];
                   thumb[i] += 1;
@@ -56,18 +44,19 @@ function App() {
           )
         })
       }
-      {modal ? <Modal></Modal> : ''}
+      {modal ? <Modal list={list} title={title} change={Change}></Modal> : ''}
       
     </div>
   );
 }
 
-function Modal(){
+function Modal(props){
   return(
     <div className='modal'>
-      <h4>제목</h4>
+      <h4>{props.list[props.title]}</h4>
       <p>내용</p>
       <p>상세내용</p>
+      <button onClick={props.change}>글수정</button>
     </div>
   )
 }
