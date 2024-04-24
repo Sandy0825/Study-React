@@ -4,6 +4,7 @@ import './App.css';
 import { useState } from 'react';
 import { Routes, Route, Link, useNavigate, Outlet } from 'react-router-dom'
 import Detail from './routes/Detail'
+import Cart from './routes/Cart'
 import axios from 'axios'
 
 
@@ -23,7 +24,8 @@ function App() {
         </Container>
       </Navbar>
       <Link to="/">홈</Link>
-      <Link to="/detail">상세페이지</Link>
+      <Link to="/detail/1">상세페이지</Link>
+      <Link to="/cart">장바구니</Link>
       <Routes>
         <Route path="/" element={
           <>
@@ -58,6 +60,8 @@ function App() {
           <Route path='two' element={<p>생일기념 쿠폰받기</p>} />
         </Route>
         <Route path="/detail/:id" element={<Detail shoes={shoes} />} />
+        
+        <Route path="/cart" element={<Cart />} />
       </Routes>
     </div>
   );

@@ -2,9 +2,14 @@ import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { Nav } from 'react-bootstrap';
 
+import { useDispatch } from "react-redux"; // 주문하기시에 redux로 아이템 장바구니에 추가할때
+import { addItem } from './../store.js';
+
 function Detail(props) {
     let { id } = useParams();
     let item = props.shoes.find((shoe) => shoe.id == id);
+
+    let dispatch = useDispatch();
 
     //** [1] ** 2초 후 사라지는 박스 함수 만들기
     // const [warning, setWarning] = useState(true);
@@ -46,7 +51,9 @@ function Detail(props) {
                     <h4 className="pt-5">{item.title}</h4>
                     <p>{item.content}</p>
                     <p>{item.price}</p>
-                    <button className="btn btn-danger">주문하기</button> 
+                    <button className="btn btn-danger" onClick={() => { 
+                        dispatch(addItem( {id : 1, name : 'Red Knit', count : 1} ))
+                    }}>주문하기</button> 
                 </div>
             </div>
             
